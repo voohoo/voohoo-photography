@@ -10,10 +10,7 @@ export default async function Home() {
 
   return (
     <>
-      <section
-        id="work"
-        className="mx-auto max-w-6xl scroll-mt-24 px-6 py-20 sm:px-8 sm:py-28"
-      >
+      <section className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-28">
         <div className="mb-12 flex items-end justify-between gap-4">
           <h2 className="font-display text-2xl sm:text-3xl">Collections</h2>
           <p className="hidden text-sm text-muted sm:block">

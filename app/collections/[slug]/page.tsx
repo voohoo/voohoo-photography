@@ -36,7 +36,7 @@ export default async function CollectionPage({
   return (
     <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-20">
       <Link
-        href="/#work"
+        href="/"
         className="text-[13px] uppercase tracking-[0.14em] text-muted transition-colors duration-200 hover:text-accent"
       >
         &larr; All collections
