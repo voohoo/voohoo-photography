@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { imagePath } from "@/lib/collections";
+import { findImageByFilename } from "@/lib/cloudinary";
 
 export const metadata: Metadata = {
   title: "About — Voohoo Photography",
@@ -8,18 +8,22 @@ export const metadata: Metadata = {
     "Voohoo Photography is a landscape practice built around patience — long exposures, fog, and the hours before sunrise.",
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const photo = await findImageByFilename("Pacific Northwest", "DSCF2408.jpg");
+
   return (
     <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-20">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
         <div className="relative aspect-[4/5] w-full overflow-hidden bg-border lg:order-2">
-          <Image
-            src={imagePath("pacific-northwest", "DSCF2408.jpg")}
-            alt="Two figures walking along a fog-bound Pacific Northwest beach"
-            fill
-            sizes="(min-width: 1024px) 45vw, 100vw"
-            className="object-cover"
-          />
+          {photo && (
+            <Image
+              src={photo.publicId}
+              alt="Two figures walking along a fog-bound Pacific Northwest beach"
+              fill
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="object-cover"
+            />
+          )}
         </div>
 
         <div className="lg:order-1">

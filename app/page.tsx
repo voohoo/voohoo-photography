@@ -1,8 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { collections, imagePath } from "@/lib/collections";
+import { collections } from "@/lib/collections";
+import { getFolderImages } from "@/lib/cloudinary";
 
-export default function Home() {
+export default async function Home() {
+  const collectionImages = await Promise.all(
+    collections.map((c) => getFolderImages(c.title)),
+  );
+
   return (
     <>
       <section
@@ -18,7 +23,9 @@ export default function Home() {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           {collections.map((c, i) => {
-            const cover = c.images[c.cover];
+            const images = collectionImages[i];
+            const cover = images[c.cover] ?? images[0];
+            if (!cover) return null;
             return (
               <Link
                 key={c.slug}
@@ -27,7 +34,7 @@ export default function Home() {
               >
                 <div className="relative aspect-[4/5] overflow-hidden bg-border">
                   <Image
-                    src={imagePath(c.slug, cover.file)}
+                    src={cover.publicId}
                     alt={`Cover photo for the ${c.title} collection`}
                     fill
                     priority={i === 0}
@@ -40,7 +47,7 @@ export default function Home() {
                     {c.title}
                   </h3>
                   <span className="whitespace-nowrap text-[13px] text-muted">
-                    {c.images.length} photos
+                    {images.length} photos
                   </span>
                 </div>
                 <p className="mt-1 text-sm text-muted">{c.location}</p>

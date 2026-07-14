@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Gallery from "@/components/Gallery";
 import { collections, getCollection } from "@/lib/collections";
+import { getFolderImages } from "@/lib/cloudinary";
 
 export function generateStaticParams() {
   return collections.map((c) => ({ slug: c.slug }));
@@ -30,6 +31,8 @@ export default async function CollectionPage({
   const collection = getCollection(slug);
   if (!collection) notFound();
 
+  const images = await getFolderImages(collection.title);
+
   return (
     <div className="mx-auto max-w-6xl px-6 py-16 sm:px-8 sm:py-20">
       <Link
@@ -52,11 +55,7 @@ export default async function CollectionPage({
       </div>
 
       <div className="mt-10">
-        <Gallery
-          slug={collection.slug}
-          title={collection.title}
-          images={collection.images}
-        />
+        <Gallery title={collection.title} images={images} />
       </div>
     </div>
   );

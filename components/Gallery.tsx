@@ -2,16 +2,14 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
-import type { CollectionImage } from "@/lib/collections";
+import type { CloudinaryImage } from "@/lib/cloudinary";
 
 export default function Gallery({
-  slug,
   title,
   images,
 }: {
-  slug: string;
   title: string;
-  images: CollectionImage[];
+  images: CloudinaryImage[];
 }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -51,14 +49,14 @@ export default function Gallery({
       <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
         {images.map((img, i) => (
           <button
-            key={img.file}
+            key={img.publicId}
             type="button"
             onClick={() => setActiveIndex(i)}
             className="group mb-4 block w-full cursor-pointer break-inside-avoid overflow-hidden bg-border"
             aria-label={`Open photo ${i + 1} of ${images.length} from ${title}`}
           >
             <Image
-              src={`/images/${slug}/${img.file}`}
+              src={img.publicId}
               alt={`${title} — photo ${i + 1}`}
               width={img.width}
               height={img.height}
@@ -103,7 +101,7 @@ export default function Gallery({
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={`/images/${slug}/${active.file}`}
+              src={active.publicId}
               alt={`${title} — enlarged photo ${activeIndex! + 1}`}
               width={active.width}
               height={active.height}
