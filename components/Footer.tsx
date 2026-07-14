@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <p className="font-display text-sm text-muted">
-          Voohoo Photography &mdash; est. {year}
+          Voohoo Photography &mdash; est. 2019
         </p>
 
         <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-2">
