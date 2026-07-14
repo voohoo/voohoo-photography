@@ -15,7 +15,7 @@ export const collections: Collection[] = [
     year: "2025",
     description:
       "Sea caves and stacked cliffs under a moonless sky, where the Pacific carves through stone and the Milky Way fills in the rest.",
-    cover: 0,
+    cover: 1,
   },
   {
     slug: "mt-tamalpais",
@@ -33,8 +33,35 @@ export const collections: Collection[] = [
     year: "2025",
     description:
       "Mist, stone, and shoreline across the Cascades and the coast — quiet mountain passes, fog-bound beaches, and old-growth understory.",
-    cover: 7,
+    cover: 51,
   },
+  {
+    slug: "croatia",
+    title: "Croatia",
+    location: "Dubrovnik, Korčula, Split, Zadar, Plitvice Lakes",
+    year: "2025",
+    description:
+      "Beautiful beaches, ancient cities, and natural wonders.",
+    cover: 36,
+  },
+  {
+    slug: "ocma",
+    title: "OCMA",
+    location: "UC Irvine Langson Orange County Museum of Art | Costa Mesa",
+    year: "2025",
+    description:
+      "Finding simple lines and shapes in the architecture.",
+    cover: 1,
+  },
+  {
+    slug: "auto-show-in-petaluma",
+    title: "Auto Show in Petaluma",
+    location: "Petaluma, California",
+    year: "2025",
+    description:
+      "I like Posches and Lambos.",
+    cover: 4,
+  }
 ];
 
 export function getCollection(slug: string): Collection | undefined {
