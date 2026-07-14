@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p ~/.claude/skills/frontend-design)",
+      "Bash(curl -fsSL https://raw.githubusercontent.com/anthropics/skills/main/skills/frontend-design/SKILL.md -o ~/.claude/skills/frontend-design/SKILL.md)",
+      "Bash(curl -fsSL https://raw.githubusercontent.com/anthropics/skills/main/skills/frontend-design/LICENSE.txt -o ~/.claude/skills/frontend-design/LICENSE.txt)",
+      "Read(//c/Users/Nakam/.claude/skills/**)",
+      "Read(//c/Users/Nakam/.claude/skills/frontend-design/**)",
+      "WebFetch(domain:github.com)",
+      "Bash(python \"C:\\\\Users\\\\Nakam\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"photography portfolio editorial moody dark minimal\" --design-system -p \"Voohoo Photography\")",
+      "Bash(npm --version)",
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --eslint --app --src-dir=false --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(rm -rf \"/c/Users/Nakam/AppData/Local/Temp/claude/C--Users-Nakam-Documents-GitHub-voohoo-phototgraphy/6dc4f41e-0532-4337-a3f7-8656f9370028/scratchpad/scaffold\")",
+      "Bash(mkdir -p \"/c/Users/Nakam/AppData/Local/Temp/claude/C--Users-Nakam-Documents-GitHub-voohoo-phototgraphy/6dc4f41e-0532-4337-a3f7-8656f9370028/scratchpad\")",
+      "Read(//c/Users/Nakam/AppData/Local/Temp/claude/C--Users-Nakam-Documents-GitHub-voohoo-phototgraphy/6dc4f41e-0532-4337-a3f7-8656f9370028/scratchpad/**)",
+      "Bash(npx --yes create-next-app@latest scaffold --typescript --tailwind --eslint --app --src-dir=false --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(rm -rf /c/Users/Nakam/AppData/Local/Temp/claude/C--Users-Nakam-Documents-GitHub-voohoo-phototgraphy/6dc4f41e-0532-4337-a3f7-8656f9370028/scratchpad/scaffold/.git)",
+      "Bash(cp -r /c/Users/Nakam/AppData/Local/Temp/claude/C--Users-Nakam-Documents-GitHub-voohoo-phototgraphy/6dc4f41e-0532-4337-a3f7-8656f9370028/scratchpad/scaffold/. /c/Users/Nakam/Documents/GitHub/voohoo-phototgraphy/)",
+      "Bash(ls -la \"/c/Users/Nakam/AppData/Local/Temp/claude/C--Users-Nakam-Documents-GitHub-voohoo-phototgraphy/6dc4f41e-0532-4337-a3f7-8656f9370028/scratchpad/scaffold\")",
+      "Bash(cp -r /c/Users/Nakam/AppData/Local/Temp/claude/C--Users-Nakam-Documents-GitHub-voohoo-phototgraphy/6dc4f41e-0532-4337-a3f7-8656f9370028/scratchpad/scaffold/app /c/Users/Nakam/Documents/GitHub/voohoo-phototgraphy/app)",
+      "Bash(cp -r /c/Users/Nakam/AppData/Local/Temp/claude/C--Users-Nakam-Documents-GitHub-voohoo-phototgraphy/6dc4f41e-0532-4337-a3f7-8656f9370028/scratchpad/scaffold/public /c/Users/Nakam/Documents/GitHub/voohoo-phototgraphy/public)",
+      "Bash(mkdir -p __TRACKED_VAR__/public/images/big-sur __TRACKED_VAR__/public/images/mt-tamalpais __TRACKED_VAR__/public/images/pacific-northwest)",
+      "Bash(cp '__TRACKED_VAR__/Big Sur/*.jpg' __TRACKED_VAR__/public/images/big-sur/)",
+      "Bash(cp '__TRACKED_VAR__/Mt Tamalpais/*.jpg' __TRACKED_VAR__/public/images/mt-tamalpais/)",
+      "Bash(cp '__TRACKED_VAR__/Pacific Northwest/*.jpg' __TRACKED_VAR__/public/images/pacific-northwest/)",
+      "Bash(node -e ' *)"
+    ]
+  }
+}
