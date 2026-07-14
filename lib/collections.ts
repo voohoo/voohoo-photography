@@ -24,7 +24,7 @@ export const collections: Collection[] = [
     year: "2025",
     description:
       "Above the fog line at dusk, where the marine layer settles into the valleys and the ridgeline holds the last color of the day.",
-    cover: 0,
+    cover: 1,
   },
   {
     slug: "pacific-northwest",
@@ -33,7 +33,7 @@ export const collections: Collection[] = [
     year: "2025",
     description:
       "Mist, stone, and shoreline across the Cascades and the coast — quiet mountain passes, fog-bound beaches, and old-growth understory.",
-    cover: 51,
+    cover: 50,
   },
   {
     slug: "croatia",
