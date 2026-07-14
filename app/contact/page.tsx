@@ -26,7 +26,7 @@ export default function ContactPage() {
             {EMAIL}
           </a>
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/voo.hoo/"
             target="_blank"
             rel="noreferrer noopener"
             className="text-[13px] uppercase tracking-[0.14em] text-muted transition-colors duration-200 hover:text-accent"
