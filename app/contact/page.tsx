@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "Get in touch with Voohoo Photography for prints, licensing, or shoots.",
 };
 
-const EMAIL = "hello@voohoophotography.com";
+const EMAIL = "vuhuypham99@gmail.com";
 
 export default function ContactPage() {
   return (
@@ -18,11 +18,6 @@ export default function ContactPage() {
         <h1 className="font-display mt-3 text-3xl leading-tight sm:text-4xl">
           Prints, licensing, or a shoot in mind — let&rsquo;s talk.
         </h1>
-        <p className="mt-5 text-[15px] leading-relaxed text-foreground/85">
-          The fastest way to reach me is email. I try to reply within a
-          couple of days.
-        </p>
-
         <div className="mt-10 flex flex-col gap-4 border-t border-border pt-8 sm:flex-row sm:items-center sm:gap-8">
           <a
             href={`mailto:${EMAIL}`}
