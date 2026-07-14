@@ -5,31 +5,6 @@ import { collections, imagePath } from "@/lib/collections";
 export default function Home() {
   return (
     <>
-      <section className="relative h-[78vh] min-h-[520px] w-full overflow-hidden">
-        <Image
-          src={imagePath("big-sur", "DSCF2570.jpg")}
-          alt="Sea cave carved into a cliff at Big Sur under a star-filled sky"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/20" />
-
-        <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-end px-6 pb-14 sm:px-8 sm:pb-20">
-          <p className="text-[13px] font-medium uppercase tracking-[0.2em] text-white/80">
-            Landscape Photography
-          </p>
-          <h1 className="font-display mt-3 max-w-xl text-4xl leading-[1.1] text-white sm:text-5xl md:text-6xl">
-            Quiet places, held in long exposures.
-          </h1>
-          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-white/80">
-            Field work from the California coast and the Pacific Northwest —
-            fog, stone, and the hours before sunrise.
-          </p>
-        </div>
-      </section>
-
       <section
         id="work"
         className="mx-auto max-w-6xl scroll-mt-24 px-6 py-20 sm:px-8 sm:py-28"
