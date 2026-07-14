@@ -12,12 +12,6 @@ export default function Footer() {
 
         <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-2">
           <Link
-            href="/about"
-            className="text-[13px] uppercase tracking-[0.1em] text-muted transition-colors duration-200 hover:text-accent"
-          >
-            About
-          </Link>
-          <Link
             href="/contact"
             className="text-[13px] uppercase tracking-[0.1em] text-muted transition-colors duration-200 hover:text-accent"
           >

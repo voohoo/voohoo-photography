@@ -5,10 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { collections } from "@/lib/collections";
 
-const links = [
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
+const links = [{ label: "Contact", href: "/contact" }];
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
