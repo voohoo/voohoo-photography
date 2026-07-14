@@ -29,7 +29,7 @@ export default async function Home() {
                 href={`/collections/${c.slug}`}
                 className="group block"
               >
-                <div className="relative aspect-[4/5] overflow-hidden bg-border">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-border">
                   <Image
                     src={cover.publicId}
                     alt={`Cover photo for the ${c.title} collection`}

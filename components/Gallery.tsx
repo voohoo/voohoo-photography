@@ -52,7 +52,7 @@ export default function Gallery({
             key={img.publicId}
             type="button"
             onClick={() => setActiveIndex(i)}
-            className="group mb-4 block w-full cursor-pointer break-inside-avoid overflow-hidden bg-border"
+            className="group mb-4 block w-full cursor-pointer break-inside-avoid overflow-hidden rounded-md bg-border"
             aria-label={`Open photo ${i + 1} of ${images.length} from ${title}`}
           >
             <Image
