@@ -6,7 +6,6 @@ import { useState } from "react";
 import { collections } from "@/lib/collections";
 
 const links = [
-  { label: "Work", href: "/#work" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
